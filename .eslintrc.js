@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     "class-methods-use-this": "off",
+    "consistent-return": "off",
     quotes: "off",
   },
 };
