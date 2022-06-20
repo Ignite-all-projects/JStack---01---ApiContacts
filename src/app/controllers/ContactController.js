@@ -40,8 +40,30 @@ class ContactController {
     response.sendStatus(204);
   }
 
-  store() {
-    // criar novo registro
+  async store(request, response) {
+    // criar um novo contact
+    const { name, email, phone, category } = request.body;
+
+    if (!name) {
+      return response.status(400).json({ error: "name is required" });
+    }
+
+    const contactExists = await ContactsRepository.findByEmail(email);
+
+    if (contactExists) {
+      return response
+        .status(400)
+        .json({ error: "this E-mail is already been taken " });
+    }
+
+    const contact = await ContactsRepository.create({
+      name,
+      email,
+      phone,
+      category,
+    });
+
+    response.json(contact);
   }
 
   update() {
