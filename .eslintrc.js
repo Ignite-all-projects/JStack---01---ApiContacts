@@ -12,6 +12,10 @@ module.exports = {
     "class-methods-use-this": "off",
     "consistent-return": "off",
     "object-curly-newline": "off",
+    "no-confusing-arrow": "off",
+    "implicit-arrow-linebreak": "off",
+    "function-paren-newline": "off",
+    "comma-dangle": "off",
     quotes: "off",
   },
 };
