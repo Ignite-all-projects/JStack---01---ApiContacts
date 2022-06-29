@@ -3,7 +3,7 @@ const { v4 } = require("uuid");
 let contacts = [
   {
     id: v4(),
-    name: "Lucas souza",
+    name: "Lucas souzaa",
     email: "lucasvini193@hotmail.com",
     phone: "123123132",
     category: v4(),
